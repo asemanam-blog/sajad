@@ -1,0 +1,576 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head>
+		<head:meta></head:meta>
+		<head:script></head:script>
+		<head:style></head:style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="http://www.fontonline.ir/css/BNasimBold.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+    
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid bg-purple text-white shadow-lg text-center p-4">
+        <a href="(*blog_link*)" class="text-reset text-decoration-none"><h1 class="title">(*blog_title*)</h1></a>
+        <span>(*blog_short_description*)</span>
+        <nav class="navbar navbar-expand-sm  mb-3 d-flex justify-content-center">
+          <div class="">
+									<box:menu>
+              <ul class="navbar-nav" style="padding-right: 0px!important;">
+								<view:menu>
+                  <li class="nav-item">
+                      <a class="nav-link text-reset (*menu_item_selected*)" href="(*menu_item_link*)">(*menu_item_title*)</a>
+                  </li>
+								</view:menu>
+                  
+              </ul>
+									</box:menu>
+          </div>
+      </nav>
+      </div>
+    </header>
+
+
+    <div class="container mt-3">
+      <div class="row">
+        <!-- post list -->
+        <div class="col-md-9 mb-4">
+					<box:post_list>
+          <div class=" mb-4">
+						<view:post_list>
+            <div class=" bg-back shadow-sm p-2 mb-3">
+              <a href="(*post_link*)" class="text-reset text-decoration-none"><h2 class="bold">(*post_title*)</h2></a>
+              <div class="mt-2">
+                (*post_summary*)
+              </div>
+              <div class="container">
+								<check:if post_has_read_more>
+                <div class="row">
+                  <div class="mr-auto py-1 px-2 text-white continue shadow-sm bg-purple">
+                    <a href="(*post_link*)" class="text-reset text-decoration-none">ادامه مطلب</a>
+                  </div>
+                </div>
+									 </check:if>
+              </div>
+             
+              <hr>
+              <div class="detail container mt-2">
+                <div class="row">
+                  <div class="col-6 d-flex">
+                    <div><i class="bi bi-vector-pen ml-1"></i><span>(*post_author*)</span></div>
+                    <div class="mr-3"><i class="bi bi-calendar-fill ml-1"></i><span>(*post_date format="%e %B %y"*)</span></div>
+                  </div>
+                  <div class="col-6  text-left">
+                    <div class="d-inline">
+										
+									<box:post_rating>
+                            <span class="rate-box (*user_rated*)">
+                              <span class="rate-button-box rate-up (*user_rated_up*)">
+                                <a class="rate-button text-decoration-none" href="(*rate_up_link*)" rel="nofollow" title="like">
+                                  (*up_rates*)
+                                  <img src="https://bayanbox.ir/view/8154146915950183688/like-removebg-preview.png" width="24px" alt="upvote">
+                                </a>
+                              </span>
+                              <span class="rate-button-box mx-2 rate-down (*user_rated_down*)">
+                                <a class="rate-button text-decoration-none" href="(*rate_down_link*)" rel="nofollow" title="dislike">
+                                  (*down_rates*)
+                                  <img src="https://bayanbox.ir/view/5277420392482428103/dislike-removebg-preview.png" width="24px" alt="downvote">
+                                </a>
+                              </span>
+                            </span>
+                          </box:post_rating>
+										
+										
+										
+										</div>
+										<div class="d-inline mr-3"><a href="(*post_link*)#comments" class="text-reset text-decoration-none"><i class="bi bi-chat-fill ml-1"></i><span> (*post_comment_count*) نظر</span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+						</view:post_list>
+          </div>
+					</box:post_list>
+
+
+
+          <!-- pagination -->
+					<box:pagination>
+          <div class="mb-2">
+            <div class="p-2 ">
+              <div class="row px-3">
+								<check:if page_prev>
+                <div class=" py-1 px-2 text-white continue shadow-sm bg-purple shadow">
+                  <a href="(*page_prev*)" class="text-reset text-decoration-none">مطالب جدیدتر</a>
+                </div>
+									</check:if>
+								<check:if page_next>
+                <div class="mr-auto py-1 px-2 text-white continue shadow-sm bg-purple shadowg">
+                  <a href="(*page_next*)" class="text-reset text-decoration-none">مطالب قدیمی تر</a>
+                </div> 
+									</check:if>
+              </div>
+            </div>
+          </div>
+					</box:pagination>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+         <!-- post detail -->
+					 <box:post_detail>
+          <div class="mb-3">
+            <div class=" bg-back shadow-sm p-2">
+              <h2 class="bold">(*post_title*)</h2>
+              <span class="text-muted f-sm p-1"> (*post_date format="%e %B %y"*)</span>
+              <div class="mt-2">
+               (*post_full_content*)
+              </div>
+              
+							 <box:post_tags>
+								 <hr>
+              <i class="bi bi-tag-fill ml-1"></i><b>برچسب ها:</b>
+								 <view:post_tags>
+									 <a class="text-reset text-decoration-none" href="(*tag_link*)"> <span class="f-sm tag px-2 text-white d-inline-block">(*tag_name*)</span></a>
+									  </view:post_tags>
+								</box:post_tags>
+              <hr>
+              <div class="detail container mt-2">
+                <div class="row">
+                  <div class="col-6 d-flex">
+                    <div><i class="bi bi-vector-pen ml-1"></i><span> (*post_author*)</span></div>
+                  </div>
+                  <div class="col-6  text-left">
+                    <div class="d-inline">
+										
+										
+											<box:post_rating>
+                            <span class="rate-box (*user_rated*)">
+                              <span class="rate-button-box rate-up (*user_rated_up*)">
+                                <a class="rate-button text-decoration-none" href="(*rate_up_link*)" rel="nofollow" title="like">
+                                  (*up_rates*)
+                                  <img src="https://bayanbox.ir/view/8154146915950183688/like-removebg-preview.png" width="24px" alt="upvote">
+                                </a>
+                              </span>
+                              <span class="rate-button-box mx-2 rate-down (*user_rated_down*)">
+                                <a class="rate-button text-decoration-none" href="(*rate_down_link*)" rel="nofollow" title="dislike">
+                                  (*down_rates*)
+                                  <img src="https://bayanbox.ir/view/5277420392482428103/dislike-removebg-preview.png" width="24px" alt="downvote">
+																
+                                </a>
+                              </span>
+                            </span>
+                          </box:post_rating>
+										
+											
+											
+											
+										</div>
+										<div class="d-inline mr-3"><a class="text-decoration-none text-reset" href="(*post_link*)#comments"><i class="bi bi-chat-fill ml-1"></i><span> (*post_comment_count*) نظر</span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+					
+          <!-- comments -->
+						 <box:post_comments>
+							           <div class="mb-3">
+            <div class=" bg-back shadow-sm p-2 text-center">
+							<a class="text-decoration-none text-reset" name="comments"><h4 class="d-inline">نظرات</h4>     </a>         
+              <span class="bg-danger text-white num">(*post_comment_count*)</span>
+              
+            </div>
+          </div>
+          <!-- the comment -->
+						 
+						 <view:post_comments>
+          <div class="mb-2 container bg-white">
+            <div class="row py-2">
+              <div class="col-2">
+                <img class="avatar-img m-auto shadow" src="(*comment_avatar*)" alt="(*comment_fullname*)">
+              </div>
+              <div class="col-9 pr-5 p-md-0 ">
+                <div class="row">
+                  <b> (*comment_fullname*)</b> 
+									 <check:if comment_website>
+                  <a href="(*comment_website*)" class=" text-decoration-none mr-1 text-primary"><i class="bi bi-patch-check-fill"></i></a>
+										 </check:if>
+                  <small class="mr-auto "> (*comment_date format="%e %B %y"*)</small>
+                </div>
+                <div class="row">
+                  (*comment_body*)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- the reply -->
+							 <check:if comment_reply>
+          <div class="mb-2 container bg-white w-90 " style="margin-right: 10%; width:90%;">
+            
+            <div class="row py-2">
+              <div class="col-2">
+                <img class="avatar-img m-auto shadow reply" src="(*comment_reply_avatar*)" alt="avatar">
+              </div>
+              <div class="col-9 pr-5 p-md-0 ">
+                <div class="row">
+                  <b>(*comment_reply_fullname*)</b> 
+                </div>
+                <div class="row">
+                  (*comment_reply_text*)
+                </div>
+              </div>
+            </div>
+          </div>
+							</check:if>
+						</view:post_comments>
+          <div class="mb-2 mt-4">
+            <div class=" bg-back shadow-sm p-2">
+             <check:if post_has_send_comment>
+                        <a name="send_comment"></a>
+                          <div class="wb-comment-add">
+                            (*comment_add_form*)
+                          </div>
+                        </check:if>
+            </div>
+          </div>
+					</box:post_comments>
+			</box:post_detail>
+
+
+
+
+
+
+
+          <!-- page detail -->
+					<box:page_detail>
+          <div class="mb-3">
+          <div class=" bg-back shadow p-2">
+            <a href="(*page_link*)" class="text-reset text-decoration-none"><h2 class="bold">(*page_title*)</h2></a>
+            <div class="my-2">
+              (*page_content*)
+            </div>
+          </div>
+        </div>
+
+
+         <!-- comments -->
+						 <box:page_comments>
+							         <div class="mb-3">
+          <div class=" bg-back shadow-sm p-2 text-center">
+            <h4 class="d-inline">نظرات</h4>              
+            <span class="bg-danger text-white num">1</span>
+            
+          </div>
+        </div>
+          <!-- the comment -->
+						 
+						 <view:page_comments>
+          <div class="mb-2 container bg-white">
+            <div class="row py-2">
+              <div class="col-2">
+                <img class="avatar-img m-auto shadow" src="(*comment_avatar*)" alt="(*comment_fullname*)">
+              </div>
+              <div class="col-9 pr-5 p-md-0 ">
+                <div class="row">
+                  <b> (*comment_fullname*)</b> 
+									 <check:if comment_website>
+                  <a href="(*comment_website*)" class=" text-decoration-none mr-1 text-primary"><i class="bi bi-patch-check-fill"></i></a>
+										 </check:if>
+                  <small class="mr-auto "> (*comment_date format="%e %B %y"*)</small>
+                </div>
+                <div class="row">
+                  (*comment_body*)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- the reply -->
+							 <check:if comment_reply>
+          <div class="mb-2 container bg-white w-90 " style="margin-right: 10%; width:90%;">
+            
+            <div class="row py-2">
+              <div class="col-2">
+                <img class="avatar-img m-auto shadow reply" src="(*comment_reply_avatar*)" alt="avatar">
+              </div>
+              <div class="col-9 pr-5 p-md-0 ">
+                <div class="row">
+                  <b>(*comment_reply_fullname*)</b> 
+                </div>
+                <div class="row">
+                  (*comment_reply_text*)
+                </div>
+              </div>
+            </div>
+          </div>
+							</check:if>
+						</view:page_comments>
+          <div class="mb-2 mt-3">
+            <div class=" bg-back shadow-sm p-2">
+             <check:if page_has_send_comment>
+                        <a name="send_comment"></a>
+                          <div class="wb-comment-add">
+                            (*comment_add_form*)
+                          </div>
+                        </check:if>
+            </div>
+          </div>
+					</box:page_comments>
+			</box:page_detail>
+					
+				
+        </div>
+        <!-- sidebar -->
+        <div class="col-md-3">
+          <!-- about -->
+					<box:blog_info>
+          <div class=" bg-side-back bg-white shadow-sm mb-4">
+          <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold">درباره ما</h5>
+						<check:if blog_image>
+            <div class="con_img">
+              <img class="about-img m-auto shadow" src="(*blog_image*)" alt="(*blog_title*)">
+            </div>
+							</check:if>
+						<check:if blog_description>
+            <div class="container">
+              <p class="mt-3">(*blog_description*)</p>
+            </div>
+						</check:if>
+          </div>
+					</box:blog_info>
+				
+					
+          <!-- analytics -->
+					<box:stat>
+          <div class=" bg-side-back bg-white shadow-sm mb-4">
+            <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold">خلاصه آمار</h5>
+            <div class="container mb-3">
+							<view:stat>
+              <div class="row mb-1">
+                <div class="col-9">
+                  <span>(*stat_title*)</span>
+                </div>
+                <div class="col-3">(*stat_value*)</div>
+              </div>
+							</view:stat>
+            </div>
+          </div>
+			</box:stat>
+
+          <!-- tags -->
+					<box:tag_cloud>
+          <div class=" bg-side-back bg-white shadow-sm mb-4">
+            <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold">برچسب ها</h5>
+            <div class="container mb-3 ">
+							<view:tag_cloud>
+								<a href="(*tag_link*)" class="text-reset text-decoration-none"><span class="f-sm tag px-2 text-white d-inline-block ">(*tag_name*)</span></a>
+							</view:tag_cloud>
+            </div>
+          </div>
+			</box:tag_cloud>
+
+          <!-- archive -->
+					<box:archive>
+          <div class=" bg-side-back bg-white shadow-sm mb-4">
+            <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold"> آرشیو مطالب</h5>
+            <div class="container mb-2">
+								<view:archive>
+              <div class="row">		
+                <div class="col">
+                  <a href="(*link_url*)" class="text-reset text-decoration-none">
+                    <i class="bi bi-archive"></i>
+                    <span>(*link_name*)</span>
+                    <span class="tag text-white px-2 bf-pjuple f-xsm">(*link_count*)مطلب</span>
+                  </a>
+                </div>
+              </div>
+								</view:archive>
+            </div>
+          </div>
+			</box:archive>
+
+
+          <!-- last post -->
+					<box:recent_posts>
+          <div class=" bg-side-back bg-white shadow-sm mb-4">
+            <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold">آخرین مطالب</h5>
+            <div class="container mb-2">
+														<view:recent_posts>
+              <div class="bg-light mb-1 hov rounded border">
+                <a href="(*post_link*)" class="text-reset text-decoration-none">
+                  <i class="bi bi-stickies ml-1"></i>
+                  (*post_title*)
+                </a>
+              </div>
+													</view:recent_posts>
+            </div>
+          </div>
+			</box:recent_posts>
+          <!-- most viewed -->
+									<box:most_visited_posts>
+          <div class=" bg-side-back bg-white shadow-sm mb-4">
+            <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold">پربیننده ترین مطالب</h5>
+            <div class="container mb-2">
+														<view:most_visited_posts>
+              <div class="bg-light mb-1 hov rounded border">
+                <a href="(*post_link*)" class="text-reset text-decoration-none">
+                  <i class="bi bi-stickies ml-1"></i>
+                  (*post_title*)
+                </a>
+              </div>
+										</view:most_visited_posts>
+            </div>
+          </div>
+										</box:most_visited_posts>
+
+          <!-- liked post -->
+								<box:popular_posts>
+          <div class=" bg-side-back bg-white shadow-sm mb-4">
+            <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold">محبوب ترین مطالب</h5>
+            <div class="container mb-2">
+														<view:popular_posts>
+              <div class="bg-light mb-1 hov rounded border">
+                <a href="(*post_link*)" class="text-reset text-decoration-none">
+                  <i class="bi bi-stickies ml-1"></i>
+                  (*post_title*)
+                </a>
+              </div>
+             							</view:popular_posts>
+            </div>
+          </div>
+			</box:popular_posts>
+
+
+          <!-- most comment post -->
+								<box:most_commented_posts>
+          <div class="w bg-side-back bg-white shadow-sm mb-4">
+            <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold">پر بحث ترین مطالب</h5>
+            <div class="container mb-2">
+							<view:most_commented_posts>
+              <div class="bg-light mb-1 hov rounded border">
+                <a href="(*post_link*)" class="text-reset text-decoration-none">
+                  <i class="bi bi-stickies ml-1"></i>
+                  (*post_title*)
+                </a>
+              </div>
+              		</view:most_commented_posts>
+            </div>
+          </div>
+			</box:most_commented_posts>
+          
+          <!-- last comments -->
+					<box:recent_comments>
+          <div class=" bg-side-back bg-white shadow-sm mb-4">
+            <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold">آخرین نظرات</h5>
+            <div class="container mb-2">
+							<view:recent_comments>
+              <div class="bg-light mb-1 hov rounded border">
+                <a href="(*comment_link*)" class="text-reset text-decoration-none">
+                  <i class="bi bi-chat-quote-fill"></i>
+                  (*comment_body_text max="25"*)</a>
+              </div>
+							</view:recent_comments>
+            </div>
+          </div>
+			</box:recent_comments>
+
+          <!-- writers -->
+						<box:authors>
+          <div class=" bg-side-back bg-white shadow-sm mb-4">
+            <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold"> نویسندگان</h5>
+            <div class="container mb-2">
+														<view:authors>
+              <div class="row">
+                <div class="col">
+                  <a href="(*author_link*)" class="text-reset text-decoration-none">
+                    <i class="bi bi-person-bounding-box"></i>
+                    <span>(*author_name*)</span>
+                    <span class="tag text-white px-2 bf-pjuple f-xsm">(*author_post_count*)مطلب</span>
+                  </a>
+                </div>
+              </div>
+							</view:authors>
+            </div>
+          </div>
+			  </box:authors>
+						
+						
+          <!-- daily linked -->
+								<box:daily_links>
+          <div class=" bg-side-back bg-white shadow-sm mb-4">
+            <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold">پیوند های روزانه</h5>
+            <div class="container mb-2">
+							<view:daily_links>
+              <div class="bg-light mb-1 hov rounded border">
+                <a alt="(*link_alt*)" href="(*link_url*)" class="text-reset text-decoration-none">
+                  <i class="bi bi-link-45deg"></i>
+                  (*link_name*)
+                </a>
+              </div>
+							</view:daily_links>
+            </div>
+          </div>
+			</box:daily_links>
+
+
+
+          <!-- links-->
+						<box:links>
+          <div class=" bg-side-back bg-white shadow-sm mb-4">
+            <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold">پیوند های روزانه</h5>
+            <div class="container mb-2">
+							<view:links>
+              <div class="bg-light mb-1 hov rounded border">
+                <a alt="(*link_alt*)" href="(*link_url*)" class="text-reset text-decoration-none">
+                  <i class="bi bi-link-45deg"></i>
+                  (*link_name*)
+                </a>
+              </div>
+							</view:links>
+            </div>
+          </div>
+			    </box:links>
+
+
+
+
+        </div>
+      </div>
+			 <div class="row  mb-3 text-left ">
+        <div class=" ml-3 p-1 px-2 bg-dark text-white mr-auto" style="border-radius:40px">
+          <a class="text-decoration-none text-reset" target="_blank" href="http://khodesajad.blog.ir/">
+          <img src="https://s17.picofile.com/file/8426886834/IMG_8542.PNG" width="30px" alt="sajadwd">
+          <b>Designed by SJD</b>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</body></html>
