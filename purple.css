@@ -10146,10 +10146,11 @@ body{
     width: 95%;
     margin: auto;
 }
-.about-img{
-    width: 100%;
-    margin: 2%;
+.about-img {
+    max-width: 100%;
+    margin: 0 auto !important;
     border-radius: 20px;
+    display: block;
 }
 .avatar-img{
     width: 70px;
