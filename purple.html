@@ -55,7 +55,7 @@
                 <div class="row">
                   <div class="col-6 d-flex">
                     <div><i class="bi bi-vector-pen ml-1"></i><span>(*post_author*)</span></div>
-                    <div class="mr-3"><i class="bi bi-calendar-fill ml-1"></i><span>(*post_date format="%e %B %y"*)</span></div>
+                    <div class="mr-3"><i class="bi bi-calendar-fill ml-1"></i><span>(*post_date format="%e %B %Y"*)</span></div>
                   </div>
                   <div class="col-6  text-left">
                     <div class="d-inline">
@@ -110,7 +110,7 @@
           <div class="mb-3">
             <div class=" bg-back shadow-sm p-2">
               <h2 class="bold">(*post_title*)</h2>
-              <span class="text-muted f-sm p-1"> (*post_date format="%e %B %y"*)</span>
+              <span class="text-muted f-sm p-1"> (*post_date format="%e %B %Y"*)</span>
               <div class="mt-2">
                (*post_full_content*)
               </div>
@@ -174,7 +174,7 @@
 									 <check:if comment_website>
                   <a href="(*comment_website*)" class=" text-decoration-none mr-1 text-primary"><i class="bi bi-patch-check-fill"></i></a>
 										 </check:if>
-                  <small class="mr-auto "> (*comment_date format="%e %B %y"*)</small>
+                  <small class="mr-auto "> (*comment_date format="%e %B %Y"*)</small>
                 </div>
                 <div class="row">
                   (*comment_body*)
@@ -245,7 +245,7 @@
 									 <check:if comment_website>
                   <a href="(*comment_website*)" class=" text-decoration-none mr-1 text-primary"><i class="bi bi-patch-check-fill"></i></a>
 										 </check:if>
-                  <small class="mr-auto "> (*comment_date format="%e %B %y"*)</small>
+                  <small class="mr-auto "> (*comment_date format="%e %B %Y"*)</small>
                 </div>
                 <div class="row">
                   (*comment_body*)
@@ -326,7 +326,7 @@
             <h5 class="bg-purple text-white d-inline-block mt-2 px-3 py-2 br-l bold">برچسب ها</h5>
             <div class="container mb-3 ">
 							<view:tag_cloud>
-								<a href="(*tag_link*)" class="text-reset text-decoration-none"><span class="f-sm tag px-2 text-white d-inline-block ">(*tag_name*)</span></a>
+								<a href="(*tag_link*)" class="text-reset text-decoration-none mimr-tags"><span class="f-sm tag px-2 text-white d-inline-block ">(*tag_name*)</span></a>
 							</view:tag_cloud>
             </div>
           </div>

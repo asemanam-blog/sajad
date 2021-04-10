@@ -10108,6 +10108,10 @@ body{
 .title{
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgb(0 0 0 / 10%), 0 0 5px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 30%), 0 3px 5px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 20%), 0 20px 20px rgb(0 0 0 / 15%);
     Font-family: BNasimBold,'BNasimBold',tahoma;
+    transition-delay: 100ms;
+}
+.title:hover {
+  text-shadow: none;
 }
 .w-95{
     width: 95%;
@@ -10119,13 +10123,31 @@ body{
 .f-sm{
     font-size: 15px;
 }
-.continue{
+.continue {
     border-radius: 40px;
     border-bottom: 3px solid #4c0a37;
+    transition: ease-in-out;
+        transition-duration: 0s;
+    transition-duration: 150ms;
 }
 .continue:active{
     border-bottom: 0px;
     transition: 0.5s!important;
+}
+.continue:hover {
+    transform: translate(5px, 0);
+}
+.mimr-tags {
+  margin-bottom: 4px;
+  display: inline-block;
+}
+.rate-box img {
+    transition: ease-in-out;
+        transition-duration: 0s;
+    transition-duration: 150ms;
+}
+.rate-box img:hover {
+    transform: rotate(30deg);
 }
 .detail{
     font-size: 14px;
@@ -10181,4 +10203,4 @@ body{
 .bold{
     font-family: sahel;
     font-weight: bold;
-}		
+}
